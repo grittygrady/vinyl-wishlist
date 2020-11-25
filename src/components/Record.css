@@ -1,0 +1,80 @@
+.completed {
+  text-decoration: line-through;
+}
+
+.Record {
+  display: flex;
+  margin: 0 -3rem;
+  padding: 1.1rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #131416;
+}
+
+.Record-title {
+  position: relative;
+}
+
+.Record-buttons {
+  flex-shrink: 0;
+  padding-left: 0.7em;
+}
+
+.Record-buttons button {
+  border: none;
+  font-size: 1em;
+  margin: 0.4em;
+  background: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.Record-edit-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Record-edit-form label {
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.Record-edit-form input {
+  flex-grow: 1;
+  border: none;
+  background: #f7f1f1;
+  padding: 0 1.5em;
+  font-size: initial;
+  margin-bottom: 5px;
+}
+
+.Record-edit-form button {
+  padding: 0 1.3rem;
+  border: none;
+  background: #131416;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.Record-edit-form button:hover {
+  background: #222833;
+}
+
+.Record-edit-form input,
+.Record-edit-form button {
+  font-family: inherit;
+  height: 3rem;
+}
+
+/*** MEDIA QUERIES ****/
+@media all and (min-width: 700px) {
+  .Record {
+    border-radius: 13px;
+  }
+}

@@ -1,0 +1,47 @@
+.RecordsList {
+  margin: auto;
+  padding: 1rem 3rem 1px;
+  max-width: 500px;
+  background: #44535D;
+  opacity: .9;
+  color: #fff;
+}
+
+.RecordsList ul {
+  margin-top: 0rem;
+  list-style: none;
+  text-align: center;
+}
+
+.RecordsList h1 {
+  font-weight: normal;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.RecordsList h1 span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+/*** Media Queries ***/
+@media all and (min-width: 700px) {
+  .RecordsList {
+    margin: 2rem auto;
+    max-width: 700px;
+    border-radius: 13px;
+  }
+
+  .RecordsList h1 {
+    font-size: 2.6rem;
+  }
+
+  .RecordsList h1 span {
+    font-size: 1.09rem;
+    margin-bottom: 1rem;
+  }
+}

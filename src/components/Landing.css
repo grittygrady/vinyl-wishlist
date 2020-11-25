@@ -1,0 +1,46 @@
+.Landing {
+  margin: auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 500px;
+  background: #44535D;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.Landing ul {
+  margin-top: 2.6rem;
+  list-style: none;
+  text-align: center;
+}
+
+.Landing h1 {
+  font-weight: normal;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.Landing h1 span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+.landing-description {
+  margin-top: 2rem;
+}
+
+/*** Media Queries ***/
+@media all and (min-width: 600px) {
+  .Landing {
+    margin: 2rem auto;
+    max-width: 700px;
+    border-radius: 13px;
+  }
+
+  .Landing h1 {
+    font-size: 2.6rem;
+  }
+}

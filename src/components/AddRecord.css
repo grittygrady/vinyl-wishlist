@@ -1,0 +1,43 @@
+.AddRecordForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.AddRecordForm label {
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.AddRecordForm input {
+  flex-grow: 1;
+  border: none;
+  background: #f7f1f1;
+  padding: 0 1.5em;
+  font-size: initial;
+  margin-bottom: 0.5rem;
+}
+
+.AddRecordForm button {
+  padding: 0 1.3rem;
+  border: none;
+  background: #131416;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.AddRecordForm button:hover {
+  background: #222833;
+}
+
+.AddRecordForm input,
+.AddRecordForm button {
+  font-family: inherit;
+  height: 3rem;
+}
