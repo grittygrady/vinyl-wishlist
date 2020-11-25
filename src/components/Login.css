@@ -1,16 +1,22 @@
-.AddRecordForm {
+.Login {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  margin: auto;
+  padding: 1rem 3rem 10px;
+  max-width: 500px;
+  background: #44535D;
+  opacity: .9;
+  color: #fff;
 }
 
-.AddRecordForm label {
+.Login label {
   min-width: 100%;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
-.AddRecordForm input {
+.Login input {
   flex-grow: 1;
   border: none;
   background: #f7f1f1;
@@ -19,7 +25,7 @@
   margin-bottom: 0.5rem;
 }
 
-.AddRecordForm button {
+.Login button {
   padding: 0 1.3rem;
   border: none;
   background: #131416;
@@ -32,12 +38,30 @@
   transition: background 0.2s ease-out;
 }
 
-.AddRecordForm button:hover {
+.Login button:hover {
   background: #222833;
 }
 
-.AddRecordForm input,
-.AddRecordForm button {
+.Login input,
+.Login button {
   font-family: inherit;
   height: 3rem;
+}
+
+/*** MEDIA QUERIES ****/
+
+@media all and (min-width: 700px) {
+  .Login {
+    margin: 2rem auto;
+    max-width: 700px;
+    border-radius: 13px;
+    padding-bottom: 1rem;
+  }
+
+  label {
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+  }
+  
 }
