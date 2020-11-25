@@ -8,7 +8,6 @@ class Login extends Component {
         <form>
           <label htmlFor="email">Email: </label>
           <input type="text" name="email" id="email" aria-label='email' required />
-          <br/>
           <label htmlFor="password">Password: </label>
           <input type="password" name="password" id="password" aria-label='password' required />
           <button>Log In</button>

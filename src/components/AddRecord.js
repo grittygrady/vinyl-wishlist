@@ -31,7 +31,7 @@ class AddRecord extends Component {
           id="title" 
           value={this.state.title}
           onChange={this.handleChange}
-          placeholder='e.g. (Van Halen - 1984) ' 
+          placeholder='e.g. (Van Halen - 1984)' 
           aria-label='Add a record'
           required
           />

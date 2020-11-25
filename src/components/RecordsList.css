@@ -1,6 +1,6 @@
 .RecordsList {
   margin: auto;
-  padding: 1rem 3rem 1px;
+  padding: 1rem 3rem 0.5rem;
   max-width: 500px;
   background: #44535D;
   opacity: .9;
