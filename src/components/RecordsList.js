@@ -14,6 +14,8 @@ class RecordsList extends Component {
     })
   }
 
+  //Set state after fetch -- then() change home to record or something more descriptive
+
   deleteRecord = (id) => {
     this.setState({
       records: this.state.records.filter(rec => rec.id !== id)
