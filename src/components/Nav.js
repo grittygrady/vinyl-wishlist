@@ -8,7 +8,7 @@ const Nav = () => {
     <nav>
       <h1>Vinyl Wishlist</h1>
       <ul className='nav-links'>
-        <Link to='/home'>
+        <Link to='/recordslist'>
           <li>Home</li>
         </Link>
         <Link to='/login'>

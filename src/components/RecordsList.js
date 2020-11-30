@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AddRecord from './AddRecord'
 import Record from './Record'
+import config from '../config'
 import './RecordsList.css'
 
 class RecordsList extends Component {
@@ -8,13 +9,28 @@ class RecordsList extends Component {
     records: []
   }
 
+  //Set state after fetch -- then() change home to record or something more descriptive
+  componentDidMount() {
+    fetch(`${config.API_ENDPOINT}/recordslist`)
+      .then(recordsRes => {
+        if (!recordsRes.ok)
+          return recordsRes.json().then(e => Promise.reject(e))
+          
+        return recordsRes.json()
+          .then(records => {
+            this.setState({ records })
+          })
+          .catch(error => {
+            console.error({ error })
+          })
+      })
+  }
+
   create = (newRecord) => {
     this.setState({
       records: [ ...this.state.records, newRecord]
     })
   }
-
-  //Set state after fetch -- then() change home to record or something more descriptive
 
   deleteRecord = (id) => {
     this.setState({
