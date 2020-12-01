@@ -39,6 +39,7 @@ class RecordsList extends Component {
   }
 
   updateRecord = (id, updatedRecord) => {
+    console.log(id, updatedRecord)
     const updatedRecords = this.state.records.map(record => {
       if (record.id === id) {
         return {...record, title: updatedRecord}

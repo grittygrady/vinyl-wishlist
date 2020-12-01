@@ -52,13 +52,13 @@ class Record extends Component {
       body: JSON.stringify(updatedRecord)
     })
       .then(res => {
+        console.log(res)
         if (!res.ok) {
           throw new Error(res.status)
         }
-        else return res.json()
+        return res.json()
       })
       .then(record => {
-        console.log('updated', record)
         this.props.updateRecord(record[0])
       })
       .catch(error => console.error({ error }))
@@ -109,8 +109,5 @@ class Record extends Component {
       return result
     }   
   }
-    
-
-
 
 export default Record
