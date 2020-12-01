@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import config from '../config'
 import './Record.css'
 
 class Record extends Component {
@@ -7,8 +8,30 @@ class Record extends Component {
     title: this.props.title
   }
 
-  handleDelete = () => {
-    this.props.deleteRecord(this.props.id)
+  handleDelete = (e) => {
+    e.preventDefault()
+    const recordId = this.props.id
+
+    fetch(`${config.API_ENDPOINT}/recordslist/${recordId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(e => Promise.reject(e))
+        }
+        return
+      })
+      .then(() => {
+        this.props.deleteRecord(recordId)
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+
+    // this.props.deleteRecord(this.props.id)
   }
 
   toggleForm = () => {
