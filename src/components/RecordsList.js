@@ -58,7 +58,6 @@ class RecordsList extends Component {
                 id={record.id}
                 title={record.title} 
                 deleteRecord={this.deleteRecord}
-                completed={record.completed}
                 updateRecord={this.updateRecord}
               />
     })

@@ -30,8 +30,6 @@ class Record extends Component {
       .catch(error => {
         console.error({ error })
       })
-
-    // this.props.deleteRecord(this.props.id)
   }
 
   toggleForm = () => {
@@ -42,7 +40,29 @@ class Record extends Component {
 
   handleUpdate = (e) => {
     e.preventDefault()
-    this.props.updateRecord(this.props.id, this.state.title)
+    const updatedRecord = {
+      title: this.state.title,
+      id: this.props.id
+    }
+    fetch(`${config.API_ENDPOINT}/recordslist/${this.props.id}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(updatedRecord)
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.status)
+        }
+        else return res.json()
+      })
+      .then(record => {
+        console.log('updated', record)
+        this.props.updateRecord(record[0])
+      })
+      .catch(error => console.error({ error }))
+    // this.props.updateRecord(this.props.id, this.state.title)
     this.setState({
       isEditing: false
     })
