@@ -11,7 +11,7 @@ class RecordsList extends Component {
 
   //Set state after fetch -- then() change home to record or something more descriptive
   componentDidMount() {
-    fetch(`${config.API_ENDPOINT}/recordslist`)
+    fetch(`${config.API_ENDPOINT}/recordslist`, {credentials: 'include'})
       .then(recordsRes => {
         if (!recordsRes.ok)
           return recordsRes.json().then(e => Promise.reject(e))
@@ -38,10 +38,10 @@ class RecordsList extends Component {
     })
   }
 
-  updateRecord = (id, updatedRecord) => {
-    console.log(id, updatedRecord)
+  updateRecord = (updatedRecord) => {
+    
     const updatedRecords = this.state.records.map(record => {
-      if (record.id === id) {
+      if (record.id === updatedRecord.id) {
         return {...record, title: updatedRecord}
       }
       return record

@@ -59,10 +59,9 @@ class Record extends Component {
         return res.json()
       })
       .then(record => {
-        this.props.updateRecord(record[0])
+        this.props.updateRecord(record)
       })
       .catch(error => console.error({ error }))
-    // this.props.updateRecord(this.props.id, this.state.title)
     this.setState({
       isEditing: false
     })
