@@ -52,7 +52,7 @@ class Record extends Component {
       body: JSON.stringify(updatedRecord)
     })
       .then(res => {
-        console.log(res)
+        console.log(updatedRecord)
         if (!res.ok) {
           throw new Error(res.status)
         }
@@ -94,7 +94,7 @@ class Record extends Component {
       } else {
         result = (
           <div className='Record'>
-            <li className='Record-title'>{this.props.title}</li>
+            <li className='Record-title'>{this.state.title}</li>
             <div className="Record-buttons">
               <button onClick={this.toggleForm}>
                 <i className='fas fa-pen' />
