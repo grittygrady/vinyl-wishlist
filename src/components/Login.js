@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import config from '../config'
 import './Login.css'
 
 class Login extends Component {
@@ -13,10 +14,35 @@ class Login extends Component {
     })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const userLogin = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    fetch(`${config.API_ENDPOINT}/login`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(userLogin)
+    })
+    .then(res => {
+      if (!res.ok)
+        return res.json().then(e => Promise.reject(e))
+      return res.json()
+    })
+    .catch(error => {
+      console.error({ error })
+    })
+
+  }
+
   render() {
     return (
       <div className='Login'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">Email: </label>
           <input type="text" name="email" id="email" value={this.state.email} onChange={this.handleChange} aria-label='email' required />
           <label htmlFor="password">Password: </label>
