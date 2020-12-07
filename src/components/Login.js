@@ -22,7 +22,7 @@ class Login extends Component {
     }
 
     fetch(`${config.API_ENDPOINT}/login`, {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'content-type': 'application/json'
       },
