@@ -4,7 +4,7 @@ import './Login.css'
 
 class Login extends Component {
   state = {
-    email: '',
+    username: '',
     password: ''
   }
 
@@ -17,7 +17,7 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const userLogin = {
-      email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     }
 
@@ -43,8 +43,8 @@ class Login extends Component {
     return (
       <div className='Login'>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Email: </label>
-          <input type="text" name="email" id="email" value={this.state.email} onChange={this.handleChange} aria-label='email' required />
+          <label htmlFor="username">username: </label>
+          <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange} aria-label='username' required />
           <label htmlFor="password">Password: </label>
           <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange} aria-label='password' required />
           <button>Log In</button>
