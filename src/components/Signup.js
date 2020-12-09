@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import config from '../config'
 import './Signup.css'
 
-const Signup = () => {
+const Signup = ({ history }) => {
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -38,7 +38,7 @@ const Signup = () => {
       .then(res => {
         if (!res.ok)
           return res.json().then(e => Promise.reject(e))
-        return res.json()
+        history.push('/recordslist')
       })
       .catch(error => {
         console.error(error)

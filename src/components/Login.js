@@ -22,21 +22,21 @@ class Login extends Component {
     }
 
     fetch(`${config.API_ENDPOINT}/login`, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
+      credentials: 'include',
       body: JSON.stringify(userLogin)
     })
     .then(res => {
       if (!res.ok)
         return res.json().then(e => Promise.reject(e))
-      return res.json()
+      this.props.history.push('/recordslist')
     })
     .catch(error => {
       console.error({ error })
     })
-
   }
 
   render() {
