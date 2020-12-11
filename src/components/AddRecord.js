@@ -17,15 +17,7 @@ class AddRecord extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const newRecord = {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-      title: this.state.title, id: uuidv4()
-=======
-      title: this.state.title, id: uuidv4(), //WHERE DO WE GET USER_ID FROM?
->>>>>>> Stashed changes
-=======
       title: this.state.title, id: uuidv4() //WHERE DO WE GET USER_ID FROM?
->>>>>>> experimenting
     }
     fetch(`${config.API_ENDPOINT}/recordslist`, {
       method: 'POST',
