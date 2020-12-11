@@ -17,16 +17,22 @@ class AddRecord extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const newRecord = {
+<<<<<<< Updated upstream
       title: this.state.title, id: uuidv4()
+=======
+      title: this.state.title, id: uuidv4(), //WHERE DO WE GET USER_ID FROM?
+>>>>>>> Stashed changes
     }
     fetch(`${config.API_ENDPOINT}/recordslist`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
+      credentials: 'include',
       body: JSON.stringify(newRecord)
     })
       .then(res => {
+        console.log(newRecord)
         if (!res.ok)
           return res.json().then(e => Promise.reject(e))
         return res.json()
