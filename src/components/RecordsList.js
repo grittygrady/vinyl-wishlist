@@ -18,7 +18,11 @@ class RecordsList extends Component {
           
         return recordsRes.json()
           .then(records => {
+            if (records.redirect) {
+              this.props.history.push(records.redirect)
+            } else {
             this.setState({ records })
+            }
           })
           .catch(error => {
             console.error({ error })
