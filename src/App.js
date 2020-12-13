@@ -26,8 +26,21 @@ class App extends Component {
   }
 
   logoutHandler = () => {
-    console.log('Loggin out!')
-    req.session.destroy()
+    fetch(`${config.API_ENDPOINT}/user`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+      credentials: "include"
+    })
+    .then(res => {
+      if (!res.ok)
+        return res.json().then(e => Promise.reject(e))
+      this.setState({ loggedIn: null })
+    })
+    .catch(error => {
+      console.error({ error })
+    })
   }
 
   render() {
@@ -41,6 +54,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route
               path="/login"
+              loginHandler={this.loginHandler}
               render={(props) => <Login {...{ ...props, setLoggedIn }} />}
             />
             <Route path="/recordslist" component={RecordsList} />
