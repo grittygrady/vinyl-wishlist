@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import config from "../config";
-import "./Signup.css";
+import "./Signup.css"
 
 const Signup = ({ history }) => {
   const formik = useFormik({
