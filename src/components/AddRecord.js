@@ -17,7 +17,7 @@ class AddRecord extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const newRecord = {
-      title: this.state.title, id: uuidv4() //WHERE DO WE GET USER_ID FROM?
+      title: this.state.title, id: uuidv4()
     }
     fetch(`${config.API_ENDPOINT}/recordslist`, {
       method: 'POST',

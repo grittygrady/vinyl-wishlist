@@ -16,7 +16,8 @@ class Record extends Component {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
-      }
+      },
+      credentials: "include"
     })
       .then(res => {
         if (!res.ok) {
