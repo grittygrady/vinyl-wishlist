@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import config from './config';
 import RecordsList from "./components/RecordsList";
 import Nav from "./components/Nav";
 import Signup from "./components/Signup";
@@ -12,7 +13,7 @@ class App extends Component {
     loggedIn: null,
   };
   componentDidMount() {
-    fetch(`http://localhost:8000/api/user`, {
+    fetch(`${config.API_ENDPOINT}/user`, {
       credentials: "include",
     })
       .then((res) => res.ok && res.json())
@@ -23,12 +24,18 @@ class App extends Component {
         });
       });
   }
+
+  logoutHandler = () => {
+    console.log('Loggin out!')
+    req.session.destroy()
+  }
+
   render() {
     const setLoggedIn = (user) => this.setState({ loggedIn: user });
     return (
       <Router>
         <div>
-          <Nav loggedIn={this.state.loggedIn} />
+          <Nav loggedIn={this.state.loggedIn} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/signup" component={Signup} />

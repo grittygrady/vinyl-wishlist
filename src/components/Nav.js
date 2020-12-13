@@ -5,6 +5,11 @@ import "./Nav.css";
 
 const Nav = (props) => {
   console.log(props);
+
+  const logoutHandler = () => {
+    props.logoutHandler()
+  }
+
   return (
     <nav>
       <h1>Vinyl Wishlist</h1>
@@ -13,8 +18,8 @@ const Nav = (props) => {
           <li>Home</li>
         </Link>
         {props.loggedIn ? (
-          <Link to="/logout">
-            <li>Logout</li>
+          <Link to="/">
+            <li onClick={logoutHandler}>Logout</li>
           </Link>
         ) : (
           <Link to="/login">
