@@ -33,6 +33,10 @@ class Login extends Component {
       if (!res.ok)
         return res.json().then(e => Promise.reject(e))
       this.props.history.push('/recordslist')
+      return res.json()
+    })
+    .then(user => {
+      this.props.setLoggedIn(user)
     })
     .catch(error => {
       console.error({ error })

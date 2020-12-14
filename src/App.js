@@ -45,6 +45,7 @@ class App extends Component {
 
   render() {
     const setLoggedIn = (user) => this.setState({ loggedIn: user });
+    console.log(this.state.loggedIn, 456)
     return (
       <Router>
         <div>
@@ -54,7 +55,6 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route
               path="/login"
-              loginHandler={this.loginHandler}
               render={(props) => <Login {...{ ...props, setLoggedIn }} />}
             />
             <Route path="/recordslist" component={RecordsList} />
