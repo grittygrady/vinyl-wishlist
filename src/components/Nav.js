@@ -4,7 +4,6 @@ import "../App.css";
 import "./Nav.css";
 
 const Nav = (props) => {
-  console.log(props);
 
   const logoutHandler = () => {
     props.logoutHandler()
@@ -14,6 +13,9 @@ const Nav = (props) => {
     <nav>
       <h1>Vinyl Wishlist</h1>
       <ul className="nav-links">
+        <Link to="/recordslist">
+          <li>Home</li>
+        </Link>
         {props.loggedIn ? (
           <Link to="/">
             <li onClick={logoutHandler}>Logout</li>

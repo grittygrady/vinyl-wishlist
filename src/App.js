@@ -12,18 +12,18 @@ class App extends Component {
   state = {
     loggedIn: null,
   };
-  componentDidMount() {
-    fetch(`${config.API_ENDPOINT}/user`, {
-      credentials: "include",
-    })
-      .then((res) => res.ok && res.json())
-      .then((user) => {
-        console.log(user);
-        this.setState({
-          loggedIn: user,
-        });
-      });
-  }
+  // componentDidMount() {
+  //   fetch(`${config.API_ENDPOINT}/user`, {
+  //     credentials: "include",
+  //   })
+  //     .then((res) => res.ok && res.json())
+  //     .then((user) => {
+  //       console.log(user);
+  //       this.setState({
+  //         loggedIn: user,
+  //       });
+  //     });
+  // }
 
   logoutHandler = () => {
     fetch(`${config.API_ENDPOINT}/user`, {

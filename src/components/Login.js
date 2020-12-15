@@ -47,7 +47,7 @@ class Login extends Component {
     return (
       <div className='Login'>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">username: </label>
+          <label htmlFor="username">Username: </label>
           <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange} aria-label='username' required />
           <label htmlFor="password">Password: </label>
           <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange} aria-label='password' required />
