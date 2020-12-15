@@ -45,7 +45,6 @@ class App extends Component {
 
   render() {
     const setLoggedIn = (user) => this.setState({ loggedIn: user });
-    console.log(this.state.loggedIn, 456)
     return (
       <Router>
         <div>

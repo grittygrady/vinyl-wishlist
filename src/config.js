@@ -1,5 +1,5 @@
 export default {
-  API_ENDPOINT: 'https://salty-escarpment-17294.herokuapp.com/api'
+  API_ENDPOINT: 'http://localhost:8000/api'
 }
 
 // HEROKU URL
