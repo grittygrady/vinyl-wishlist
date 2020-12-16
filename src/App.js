@@ -35,7 +35,7 @@ class App extends Component {
     .then(res => {
       if (!res.ok)
         return res.json().then(e => Promise.reject(e))
-      this.setState({ loggedIn: null })
+      this.setState({ loggedIn: {} })
     })
     .catch(error => {
       console.error({ error })
