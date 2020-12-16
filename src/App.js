@@ -18,7 +18,6 @@ class App extends Component {
     })
       .then((res) => res.ok && res.json())
       .then((user) => {
-        console.log(user);
         this.setState({
           loggedIn: user,
         });
