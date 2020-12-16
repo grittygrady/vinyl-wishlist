@@ -10,7 +10,7 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    loggedIn: null,
+    loggedIn: {},
   };
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}/user`, {
@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Nav loggedIn={this.state.loggedIn} logoutHandler={this.logoutHandler} />
+          <Nav loggedIn={this.state.loggedIn.username} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/signup" component={Signup} />
