@@ -14,6 +14,7 @@ class Record extends Component {
 
     fetch(`${config.API_ENDPOINT}/recordslist/${recordId}`, {
       method: 'DELETE',
+      mode: 'cors',
       headers: {
         'content-type': 'application/json'
       },
