@@ -50,7 +50,7 @@ class Record extends Component {
       headers: {
         'content-type': 'application/json'
       },
-      credentials: 'include'
+      credentials: 'include',
       body: JSON.stringify(updatedRecord)
     })
     .then((res) => {
