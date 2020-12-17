@@ -37,9 +37,8 @@ class RecordsList extends Component {
   }
 
   deleteRecord = (id) => {
-    const deletedRecordList = this.state.records.filter(rec => rec.id !== id)
     this.setState({
-      records: deletedRecordList
+      records: this.state.records.filter(rec => rec.id !== id)
     })
   }
 
