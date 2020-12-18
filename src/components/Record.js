@@ -23,7 +23,7 @@ class Record extends Component {
         if (!res.ok) {
           return res.json().then(e => Promise.reject(e))
         }
-        res.json()
+        // res.json()
       })
       .then(() => {
         this.props.deleteRecord(recordId)
