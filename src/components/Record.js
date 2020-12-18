@@ -53,9 +53,9 @@ class Record extends Component {
       credentials: 'include',
       body: JSON.stringify(updatedRecord)
     })
+    console.log(this.props)
     .then((res) => {
       if (!res.ok) return res.json().then((e) => Promise.reject(e));
-      console.log(res)
     })
       .then(record => {
         this.props.updateRecord(record)
