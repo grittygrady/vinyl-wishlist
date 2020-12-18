@@ -28,7 +28,6 @@ class AddRecord extends Component {
       body: JSON.stringify(newRecord)
     })
       .then(res => {
-        console.log(newRecord)
         if (!res.ok)
           return res.json().then(e => Promise.reject(e))
         return res.json()
