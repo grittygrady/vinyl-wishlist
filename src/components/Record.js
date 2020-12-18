@@ -43,7 +43,7 @@ class Record extends Component {
       title: this.state.title,
       id: this.props.id
     }
-    fetch(`${config.API_ENDPOINT}/recordslist/${this.props.id}`, {
+    fetch(`${config.API_ENDPOINT}/recordslist/${updatedRecord.id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json'
