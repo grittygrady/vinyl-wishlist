@@ -11,7 +11,6 @@ class Record extends Component {
   handleDelete = (e) => {
     e.preventDefault()
     const recordId = this.props.id
-    console.log(this.props)
     fetch(`${config.API_ENDPOINT}/recordslist/${recordId}`, {
       method: 'DELETE',
       headers: {
@@ -23,7 +22,6 @@ class Record extends Component {
         if (!res.ok) {
           return res.json().then(e => Promise.reject(e))
         }
-        // res.json()
       })
       .then(() => {
         this.props.deleteRecord(recordId)
