@@ -11,7 +11,7 @@ class Record extends Component {
   handleDelete = (e) => {
     e.preventDefault()
     const recordId = this.props.id
-
+    console.log(this.props)
     fetch(`${config.API_ENDPOINT}/recordslist/${recordId}`, {
       method: 'DELETE',
       headers: {
@@ -97,7 +97,7 @@ class Record extends Component {
               <button onClick={this.toggleForm}>
                 <i className='fas fa-pen' />
               </button>
-              <button onClick={this.handleDelete}>
+              <button onClick={(e) => this.handleDelete(e)}>
                 <i className='fas fa-trash' />
               </button>
             </div>
