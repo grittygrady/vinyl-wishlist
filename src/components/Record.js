@@ -54,6 +54,7 @@ class Record extends Component {
     .then((res) => {
       console.log(res)
       if (!res.ok) return res.json().then((e) => Promise.reject(e));
+      res.json()
     })
       .then(record => {
         this.props.updateRecord(record)
