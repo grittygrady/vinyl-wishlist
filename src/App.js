@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-        {/^((?!chrome|android).)*safari/i.test(navigator.userAgent) && <span>YOU BE ON SFARI</span>}
+        {/^((?!chrome|android).)*safari/i.test(navigator.userAgent) && <span style={{textAlign: 'center'}}>YOU ARE USING SAFARI. COOKIES MUST BE ENABLED TO USE THIS SITE</span>}
           <Nav loggedIn={this.state.loggedIn.username} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />
