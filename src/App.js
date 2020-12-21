@@ -47,6 +47,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+        {/^((?!chrome|android).)*safari/i.test(navigator.userAgent) && <span>YOU BE ON SFARI</span>}
           <Nav loggedIn={this.state.loggedIn.username} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />

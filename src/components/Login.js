@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import config from '../config'
 import './Login.css'
 
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
 class Login extends Component {
   state = {
     username: '',
@@ -36,7 +30,6 @@ class Login extends Component {
       body: JSON.stringify(userLogin)
     })
     .then(res => {
-      console.log(getCookie('connect.sid'))
       if (!res.ok)
         return res.json().then(e => Promise.reject(e))
       this.props.history.push('/recordslist')
