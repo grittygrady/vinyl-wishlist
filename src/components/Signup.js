@@ -80,6 +80,7 @@ const Signup = ({ history }) => {
         {formik.errors.password && formik.touched.password && (
           <p>{formik.errors.password}</p>
         )}
+          <br />
         <label htmlFor="confirm_password">Confirm Password:</label>
           <br />
         <input
