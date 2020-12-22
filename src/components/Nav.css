@@ -51,6 +51,7 @@ a:visited {
   }
 
   .nav-links li {
+    width: 50%;
     margin: 0 5px;
     font-size: 1.5rem;
   }
