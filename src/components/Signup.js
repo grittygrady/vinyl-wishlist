@@ -81,6 +81,7 @@ const Signup = ({ history }) => {
           <p>{formik.errors.password}</p>
         )}
         <label htmlFor="confirm_password">Confirm Password:</label>
+          <br />
         <input
           type="password"
           name="confirm_password"
