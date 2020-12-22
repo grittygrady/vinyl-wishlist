@@ -54,6 +54,7 @@ const Signup = (props) => {
     <div className="Signup">
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="username">Username: </label>
+          <br />
         <input
           type="text"
           name="username"
