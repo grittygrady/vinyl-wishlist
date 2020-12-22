@@ -40,7 +40,6 @@ class Login extends Component {
       this.props.setLoggedIn(user)
     })
     .catch(error => {
-      // console.error({ error })
       this.setState({
         error
       })
@@ -49,16 +48,23 @@ class Login extends Component {
 
   render() {
     return (
+      <>
+      {(!this.props.loggedIn.username && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
+        <div className="cookies-msg">
+          <span style={{textAlign: 'center', color: 'red'}}>It appears you are using Safari. Cookies must be enabled for this site. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" rel="noreferrer" target="_blank">click here</a>.</span>
+        </div>  
+      }
       <div className='Login'>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="username">Username: </label>
           <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange} aria-label='username' required />
           <label htmlFor="password">Password: </label>
           <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange} aria-label='password' required />
-          {this.state.error && <p className='errorMsg'>Password is incorrect</p>}
+            {this.state.error && <p className='errorMsg'>Password is incorrect</p>}
           <button>Log In</button>
         </form>
       </div>
+      </>
     )
   }
 }
