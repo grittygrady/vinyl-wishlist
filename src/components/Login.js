@@ -51,7 +51,7 @@ class Login extends Component {
       <>
       {(!this.props.loggedIn && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
         <div className="cookies-msg">
-          <span style={{textAlign: 'center', color: 'red'}}>It appears you are using Safari. Cookies must be enabled for this site. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" rel="noreferrer" target="_blank">click here</a>.</span>
+          <span style={{textAlign: 'center', color: 'black'}}>It appears you are using Safari. Cookies must be enabled for this site. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" rel="noreferrer" target="_blank">click here</a>.</span>
         </div>  
       }
       <div className='Login'>
