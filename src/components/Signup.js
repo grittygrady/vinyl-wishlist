@@ -46,7 +46,7 @@ const Signup = (props) => {
 
   return (
     <>
-      {(!this.props.loggedIn && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
+      {(!props.loggedIn && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
         <div className="cookies-msg">
           <span style={{textAlign: 'center', color: 'black'}}><strong>It appears you are using Safari. Cookies must be enabled for this site. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" rel="noreferrer" target="_blank">click here</a>.</strong></span>
         </div>  
