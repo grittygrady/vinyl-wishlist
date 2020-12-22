@@ -40,9 +40,9 @@ class Login extends Component {
       this.props.setLoggedIn(user)
     })
     .catch(error => {
-      console.error({ error })
+      // console.error({ error })
       this.setState({
-        error: 'Password is incorrect.'ß
+        error: 'Password is incorrect.'
       })
     })
   }
