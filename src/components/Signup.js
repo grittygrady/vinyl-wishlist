@@ -58,7 +58,9 @@ const Signup = ({ history }) => {
         {formik.errors.username && formik.touched.username && (
           <p>{formik.errors.username}</p>
         )}
+          <br />
         <label htmlFor="email">Email: </label>
+          <br />
         <input
           type="text"
           name="email"
@@ -69,7 +71,9 @@ const Signup = ({ history }) => {
         {formik.errors.email && formik.touched.email && (
           <p>{formik.errors.email}</p>
         )}
+          <br />
         <label htmlFor="password">Password: </label>
+          <br />
         <input
           type="password"
           name="password"
