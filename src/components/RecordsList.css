@@ -29,7 +29,7 @@
 }
 
 /*** Media Queries ***/
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
   .RecordsList {
     margin: 2rem auto;
     max-width: 700px;
