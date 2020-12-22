@@ -50,8 +50,11 @@ a:visited {
     font-size: 2.6rem;
   }
 
-  .nav-links li {
+  .nav-links {
     width: 50%;
+  }
+
+  .nav-links li {
     margin: 0 5px;
     font-size: 1.5rem;
   }
