@@ -1,6 +1,6 @@
 .Signup {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 3rem;
   margin: auto;
   padding: 1rem 3rem 10px;
