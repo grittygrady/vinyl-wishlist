@@ -48,7 +48,8 @@ class App extends Component {
       <Router>
         <div>
         {/* CHECKS TO SEE IF SAFARI IS BEING USED AS IT PREVENTS CROSS SITE COOKIES */}
-        {(!this.state.loggedIn.username && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && <span style={{textAlign: 'center', color: 'red'}}>YOU ARE USING SAFARI. COOKIES MUST BE ENABLED TO USE THIS SITE</span>}
+        {(!this.state.loggedIn.username && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
+            <span style={{textAlign: 'center', color: 'red'}}>YOU ARE USING SAFARI. COOKIES MUST BE ENABLED TO USE THIS SITE. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" target="_blank">click here</a> to learn more.</span>}
           <Nav loggedIn={this.state.loggedIn.username} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />
