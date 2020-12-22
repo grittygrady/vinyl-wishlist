@@ -54,7 +54,7 @@
 
 .cookies-msg {
   margin: auto;
-  padding: 2rem 3rem 3rem;
+  padding: 1rem 3rem 1rem;
   max-width: 500px;
   background: #44535D;
   color: #fff;
@@ -65,10 +65,10 @@
 
 @media all and (min-width: 800px) {
   .Login {
-    margin: 1rem auto;
+    margin: 2rem auto;
     max-width: 700px;
     border-radius: 13px;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
 
   .Login button {
