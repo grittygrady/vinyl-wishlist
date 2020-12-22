@@ -48,6 +48,15 @@
   height: 3rem;
 }
 
+.cookies-msg {
+  margin: auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 500px;
+  background: #44535D;
+  color: #fff;
+  opacity: 0.9;
+}
+
 /*** MEDIA QUERIES ****/
 
 @media all and (min-width: 800px) {
@@ -66,5 +75,11 @@
     width: 200px;
     display: inline-block;
     text-align: left;
+  }
+
+  .cookies-msg {
+    margin: 2rem auto;
+    max-width: 700px;
+    border-radius: 13px;
   }
 }

@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import config from "../config";
 import "./Signup.css"
 
-const Signup = ({ history }) => {
+const Signup = (props) => {
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -36,7 +36,7 @@ const Signup = ({ history }) => {
       })
         .then((res) => {
           if (!res.ok) return res.json().then((e) => Promise.reject(e));
-          history.push("/recordslist");
+          this.history.push("/recordslist");
         })
         .catch((error) => {
           console.error(error);
@@ -45,6 +45,12 @@ const Signup = ({ history }) => {
   });
 
   return (
+    <>
+      {(!this.props.loggedIn && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) && 
+        <div className="cookies-msg">
+          <span style={{textAlign: 'center', color: 'black'}}><strong>It appears you are using Safari. Cookies must be enabled for this site. For more information <a href="https://www.arcolatheatre.com/disable-prevent-cross-site-tracking/" rel="noreferrer" target="_blank">click here</a>.</strong></span>
+        </div>  
+      }
     <div className="Signup">
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="username">Username: </label>
@@ -100,6 +106,7 @@ const Signup = ({ history }) => {
         <button type="submit">Sign Up</button>
       </form>
     </div>
+    </>
   );
 };
 

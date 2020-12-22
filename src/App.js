@@ -53,7 +53,7 @@ class App extends Component {
           <Nav loggedIn={this.state.loggedIn.username} logoutHandler={this.logoutHandler} />
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route path="/signup" component={Signup} />
+            <Route path="/signup" component={Signup} loggedIn={this.state.loggedIn.username} />
             <Route
               path="/login"
               render={(props) => <Login {...{ ...props, setLoggedIn }} />}
