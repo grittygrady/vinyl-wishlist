@@ -55,7 +55,7 @@ class Login extends Component {
           <input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange} aria-label='username' required />
           <label htmlFor="password">Password: </label>
           <input type="password" name="password" id="password" value={this.state.password} onChange={this.handleChange} aria-label='password' required />
-          {this.state.error && <p>Password is incorrect</p>}
+          {this.state.error && <p className='errorMsg'>Password is incorrect</p>}
           <button>Log In</button>
         </form>
       </div>

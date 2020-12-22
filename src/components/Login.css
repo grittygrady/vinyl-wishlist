@@ -48,6 +48,10 @@
   height: 3rem;
 }
 
+.errorMsg {
+  margin-bottom: 5px;
+}
+
 /*** MEDIA QUERIES ****/
 
 @media all and (min-width: 800px) {
