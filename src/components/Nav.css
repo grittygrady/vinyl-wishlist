@@ -16,7 +16,7 @@ nav h1 {
 }
 
 .nav-links {
-  width: 50%;
+  width: 65%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
