@@ -53,15 +53,15 @@ class Record extends Component {
     })
     .then((res) => {
       if (!res.ok) return res.json().then((e) => Promise.reject(e));
-      res.json()
+      return res.json()
     })
       .then(record => {
         this.props.updateRecord(record)
+        this.setState({
+          isEditing: false
+        })
       })
       .catch(error => console.error({ error }))
-    this.setState({
-      isEditing: false
-    })
   }
 
   handleChange = (e) => {
