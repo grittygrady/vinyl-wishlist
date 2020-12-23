@@ -1,4 +1,4 @@
-import React from "react";
+import React, { history } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import config from "../config";
@@ -36,7 +36,7 @@ const Signup = (props) => {
       })
         .then((res) => {
           if (!res.ok) return res.json().then((e) => Promise.reject(e));
-          this.props.history.push("/recordslist");
+          history.push("/recordslist");
         })
         .catch((error) => {
           console.error(error);
