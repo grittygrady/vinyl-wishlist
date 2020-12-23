@@ -38,6 +38,9 @@ const Signup = (props) => {
           if (!res.ok) return res.json().then((e) => Promise.reject(e));
           props.history.push("/recordslist");
         })
+        .then(user => {
+          this.props.setLoggedIn(user)
+        })
         .catch((error) => {
           console.error(error);
         });
