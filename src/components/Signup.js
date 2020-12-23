@@ -36,7 +36,7 @@ const Signup = (props) => {
       })
         .then((res) => {
           if (!res.ok) return res.json().then((e) => Promise.reject(e));
-          this.props.history.push("/recordslist");
+          props.history.push("/recordslist");
         })
         .catch((error) => {
           console.error(error);
