@@ -53,7 +53,7 @@ class Record extends Component {
     })
     .then((res) => {
       if (!res.ok) return res.json().then((e) => Promise.reject(e));
-      // return res.json()
+      res.json()
     })
       .then(record => {
         this.props.updateRecord(record)
