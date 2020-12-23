@@ -57,11 +57,11 @@ class Record extends Component {
     })
       .then(record => {
         this.props.updateRecord(record)
-        this.setState({
-          isEditing: false
-        })
       })
       .catch(error => console.error({ error }))
+      this.setState({
+        isEditing: false
+      })
   }
 
   handleChange = (e) => {
