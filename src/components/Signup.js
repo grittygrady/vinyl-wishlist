@@ -39,7 +39,7 @@ const Signup = (props) => {
           props.history.push("/recordslist");
         })
         .then(user => {
-          this.props.setLoggedIn(user)
+          props.setLoggedIn(user)
         })
         .catch((error) => {
           console.error(error);
