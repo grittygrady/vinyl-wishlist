@@ -36,7 +36,11 @@ const Signup = (props) => {
       })
         .then((res) => {
           if (!res.ok) return res.json().then((e) => Promise.reject(e));
-          props.history.push("/recordslist");
+          props.history.push('/recordslist')
+          return res.json()
+        })
+        .then(user => {
+          props.setLoggedIn(user)
         })
         .catch((error) => {
           console.error(error);
